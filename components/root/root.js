@@ -9,7 +9,7 @@ if (typeof __decorate !== "function") __decorate = function (decorators, target,
 if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/// <reference path="typings/angular2/angular2.d.ts" />
+/// <reference path="../../typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
 var Root = (function () {
     function Root() {
@@ -20,7 +20,7 @@ var Root = (function () {
             selector: 'root'
         }),
         angular2_1.View({
-            templateUrl: "app.tpl.html"
+            templateUrl: "components/root/root.tpl.html" // note that absolute path should be used
         }), 
         __metadata('design:paramtypes', [])
     ], Root);

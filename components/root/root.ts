@@ -1,4 +1,4 @@
-/// <reference path="typings/angular2/angular2.d.ts" />
+/// <reference path="../../typings/angular2/angular2.d.ts" />
 import {Component, View, bootstrap} from 'angular2/angular2';
 
 @Component({
@@ -6,7 +6,7 @@ import {Component, View, bootstrap} from 'angular2/angular2';
 })
 
 @View({
-  templateUrl: "app.tpl.html"
+  templateUrl: "components/root/root.tpl.html" // note that absolute path should be used
 })
 
 export class Root {
