@@ -6,7 +6,7 @@ import {Component, View, bootstrap} from 'angular2/angular2';
 })
 
 @View({
-  templateUrl: "app.tpl.html"
+  templateUrl: "root.tpl.html"
 })
 
 export class Root {
