@@ -1,3 +1,4 @@
+/// <reference path="../../typings/angular2/angular2.d.ts" />
 if (typeof __decorate !== "function") __decorate = function (decorators, target, key, desc) {
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
     switch (arguments.length) {
@@ -9,23 +10,25 @@ if (typeof __decorate !== "function") __decorate = function (decorators, target,
 if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/// <reference path="../../typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
-var messenger_1 = require('components/messenger/messenger');
-var Root = (function () {
-    function Root() {
-        this.title = "Introduction to Angular2";
+var Messenger = (function () {
+    function Messenger() {
+        this.title = "Messenger manager";
+        this.messages = [
+            { title: "Hello", msg: "Hello how are you" },
+            { title: "Meeting", msg: "This is a meeting message" },
+            { title: "GoodBye", msg: "This is a good bye message" }
+        ];
     }
-    Root = __decorate([
+    Messenger = __decorate([
         angular2_1.Component({
-            selector: 'root'
+            selector: 'messenger'
         }),
         angular2_1.View({
-            templateUrl: "components/root/root.tpl.html",
-            directives: [messenger_1.Messenger] /*Registering messenger with root*/
+            templateUrl: "components/messenger/messenger.tpl.html"
         }), 
         __metadata('design:paramtypes', [])
-    ], Root);
-    return Root;
+    ], Messenger);
+    return Messenger;
 })();
-exports.Root = Root;
+exports.Messenger = Messenger;
