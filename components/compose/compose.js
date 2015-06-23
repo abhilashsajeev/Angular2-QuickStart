@@ -13,14 +13,17 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
 var angular2_1 = require('angular2/angular2');
 var Compose = (function () {
     function Compose() {
-        this.title = "Messenger messenger";
-        this.messages = [
-            { title: "Hello", msg: "This is Hello Message" },
-            { title: "Meeting", msg: "This is Meeting Message" },
-            { title: "Good bye", msg: "This is Good bye Message" }
-        ];
-        this.grade = 1;
+        this.title = "I am the composer";
     }
+    Compose.prototype.add = function (elm) {
+        this.message = elm.value;
+    };
+    Compose.prototype.onDoneTyping = function ($event) {
+        if ($event.which === 13) {
+            this.message = $event.target.value;
+            $event.target.value = null;
+        }
+    };
     Compose = __decorate([
         angular2_1.Component({
             selector: "compose"

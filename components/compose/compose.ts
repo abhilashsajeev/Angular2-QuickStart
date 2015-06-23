@@ -12,15 +12,19 @@ import {Component, View, NgFor} from 'angular2/angular2';
 
 export class Compose {
 	title:string;
-	messages:any[];
-	grade:number;
+	message:string;
+	
 	constructor(){
-		this.title = "Messenger messenger";
-		this.messages = [
-			{title:"Hello" ,msg:"This is Hello Message"},
-			{title:"Meeting" ,msg:"This is Meeting Message"},
-			{title:"Good bye" ,msg:"This is Good bye Message"}
-		];
-		this.grade = 1;
+		this.title = "I am the composer";
+		
+	}
+	add(elm){
+		this.message = elm.value;
+	}
+	onDoneTyping($event){
+		if($event.which===13){
+			this.message = $event.target.value;
+			$event.target.value = null;
+		}
 	}
 }
