@@ -5,6 +5,6 @@
   and loads it.
 */
 import {bootstrap} from 'angular2/angular2';
-import {Root} from 'root';
+import {Root} from 'components/root/root';
 
 bootstrap(Root);

@@ -9,18 +9,24 @@ if (typeof __decorate !== "function") __decorate = function (decorators, target,
 if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/// <reference path="typings/angular2/angular2.d.ts" />
+/// <reference path="../../typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
+var messenger_1 = require('components/messenger/messenger');
+/*
+  The root component. The other components
+  are the subtree of the root.
+*/
 var Root = (function () {
     function Root() {
-        this.title = "Introduction to Angular2";
+        this.title = "Introduction to Angular2 By";
     }
     Root = __decorate([
         angular2_1.Component({
             selector: 'root'
         }),
         angular2_1.View({
-            templateUrl: "root.tpl.html"
+            templateUrl: "components/root/root.tpl.html",
+            directives: [messenger_1.Messenger]
         }), 
         __metadata('design:paramtypes', [])
     ], Root);

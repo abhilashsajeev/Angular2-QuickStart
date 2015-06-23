@@ -1,13 +1,20 @@
 {
-  "name": "ng2",
-  "version": "1.0.0",
-  "description": "",
+  "name": "AngularQuickStart",
+  "version": "0.0.1",
+  "description": "Angular 2 Learning",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc --watch -m commonjs -t es5 --emitDecoratorMetadata main.ts"
+    "start":"tsc --watch -m commonjs -t es5 --emitDecoratorMetadata main.ts"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhilashsajeev/Angular-QuickStart.git"
+  },
+  "author": "Abhilash",
   "license": "ISC",
-  "devDependencies": {}
+  "bugs": {
+    "url": "https://github.com/abhilashsajeev/Angular-QuickStart/issues"
+  },
+  "homepage": "https://github.com/abhilashsajeev/Angular-QuickStart"
 }
