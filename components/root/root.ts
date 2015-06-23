@@ -18,7 +18,7 @@ import {Messenger} from 'components/messenger/messenger';
 export class Root {
   title: string;
   constructor() {
-    this.title = "Introduction to Angular2 By";
+    this.title = "Introduction to Angular2 ";
   }
 }
 

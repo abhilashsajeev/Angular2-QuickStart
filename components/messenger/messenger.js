@@ -11,21 +11,24 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
 };
 /// <reference path="../../typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
+var compose_1 = require('../compose/compose');
 var Messenger = (function () {
     function Messenger() {
-        this.title = "Messageer messenger";
+        this.title = "Messenger messenger";
         this.messages = [
             { title: "Hello", msg: "This is Hello Message" },
             { title: "Meeting", msg: "This is Meeting Message" },
             { title: "Good bye", msg: "This is Good bye Message" }
         ];
+        this.grade = 1;
     }
     Messenger = __decorate([
         angular2_1.Component({
             selector: "messenger"
         }),
         angular2_1.View({
-            templateUrl: "components/messenger/messenger.tpl.html"
+            templateUrl: "components/messenger/messenger.tpl.html",
+            directives: [angular2_1.NgFor, compose_1.Compose]
         }), 
         __metadata('design:paramtypes', [])
     ], Messenger);

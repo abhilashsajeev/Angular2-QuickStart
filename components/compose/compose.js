@@ -11,25 +11,26 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
 };
 /// <reference path="../../typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
-var messenger_1 = require('components/messenger/messenger');
-/*
-  The root component. The other components
-  are the subtree of the root.
-*/
-var Root = (function () {
-    function Root() {
-        this.title = "Introduction to Angular2 ";
+var Compose = (function () {
+    function Compose() {
+        this.title = "Messenger messenger";
+        this.messages = [
+            { title: "Hello", msg: "This is Hello Message" },
+            { title: "Meeting", msg: "This is Meeting Message" },
+            { title: "Good bye", msg: "This is Good bye Message" }
+        ];
+        this.grade = 1;
     }
-    Root = __decorate([
+    Compose = __decorate([
         angular2_1.Component({
-            selector: 'root'
+            selector: "compose"
         }),
         angular2_1.View({
-            templateUrl: "components/root/root.tpl.html",
-            directives: [messenger_1.Messenger]
+            templateUrl: "components/compose/compose.tpl.html",
+            directives: [angular2_1.NgFor]
         }), 
         __metadata('design:paramtypes', [])
-    ], Root);
-    return Root;
+    ], Compose);
+    return Compose;
 })();
-exports.Root = Root;
+exports.Compose = Compose;

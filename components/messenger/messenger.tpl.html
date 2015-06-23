@@ -1,9 +1,13 @@
 <div>
+  <content></content>
   <h2>Messenger</h2>
   {{ title }}
   <div>
     <h2>Values</h2>
-    {{ messages }}
+	  <ul>
+		  <li *ng-for="#msg of messages">{{msg.title}}</li>
+	  </ul>
+	  <h2 [hidden]=grade>Grade is here </h2>
+	  <compose></compose>
   </div>
-  <content></content>
 </div>

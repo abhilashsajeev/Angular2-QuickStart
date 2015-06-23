@@ -1,17 +1,16 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
 import {Component, View, NgFor} from 'angular2/angular2';
-import {Compose} from '../compose/compose'
 
 @Component({
-	selector:"messenger"
+	selector:"compose"
 })
 
 @View({
-	templateUrl:"components/messenger/messenger.tpl.html",
-	directives:[ NgFor, Compose ]
+	templateUrl:"components/compose/compose.tpl.html",
+	directives:[ NgFor ]
 })
 
-export class Messenger {
+export class Compose {
 	title:string;
 	messages:any[];
 	grade:number;
