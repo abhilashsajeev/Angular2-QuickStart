@@ -19,6 +19,7 @@ var Messenger = (function () {
             { title: "Meeting", msg: "This is Meeting Message" },
             { title: "Good bye", msg: "This is Good bye Message" }
         ];
+        this.grade = 1;
     }
     Messenger = __decorate([
         angular2_1.Component({
