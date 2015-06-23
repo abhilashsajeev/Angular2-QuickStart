@@ -1,4 +1,4 @@
-# Angular-QuickStart
+# Angular2-QuickStart
 The learning curve i have followed in learning the angular. Check the branches
 
 ## Get started
