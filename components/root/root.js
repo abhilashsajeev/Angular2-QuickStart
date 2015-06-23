@@ -18,7 +18,7 @@ var messenger_1 = require('components/messenger/messenger');
 */
 var Root = (function () {
     function Root() {
-        this.title = "Introduction to Angular2 By";
+        this.title = "Introduction to Angular2 ";
     }
     Root = __decorate([
         angular2_1.Component({

@@ -3,7 +3,9 @@
   {{ title }}
   <div>
     <h2>Values</h2>
-    {{ messages }}
+	  <ul>
+		  <li *ng-for="#msg of messages">{{msg.title}}</li>
+	  </ul>
   </div>
   <content></content>
 </div>

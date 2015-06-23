@@ -13,7 +13,7 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
 var angular2_1 = require('angular2/angular2');
 var Messenger = (function () {
     function Messenger() {
-        this.title = "Messageer messenger";
+        this.title = "Messenger messenger";
         this.messages = [
             { title: "Hello", msg: "This is Hello Message" },
             { title: "Meeting", msg: "This is Meeting Message" },
@@ -25,7 +25,8 @@ var Messenger = (function () {
             selector: "messenger"
         }),
         angular2_1.View({
-            templateUrl: "components/messenger/messenger.tpl.html"
+            templateUrl: "components/messenger/messenger.tpl.html",
+            directives: [angular2_1.NgFor]
         }), 
         __metadata('design:paramtypes', [])
     ], Messenger);
