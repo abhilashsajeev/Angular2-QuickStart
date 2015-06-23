@@ -1,9 +1,12 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
 import {Component, View, NgFor} from 'angular2/angular2';
-import {Compose} from '../compose/compose'
+import {Compose} from 'components/compose/compose';
+import {MsgStore} from 'components/messenger/MsgStore';
 
 @Component({
-	selector:"messenger"
+	selector:"messenger",
+	appInjector:[MsgStore]
+	
 })
 
 @View({
@@ -15,13 +18,9 @@ export class Messenger {
 	title:string;
 	messages:any[];
 	grade:number;
-	constructor(){
-		this.title = "Messenger messenger";
-		this.messages = [
-			{title:"Hello" ,msg:"This is Hello Message"},
-			{title:"Meeting" ,msg:"This is Meeting Message"},
-			{title:"Good bye" ,msg:"This is Good bye Message"}
-		];
+	constructor(msgStore:MsgStore){
+		this.title = "Messenger Component Title";
+		this.messages = msgStore.getAll();
 		this.grade = 1;
 	}
 }

@@ -11,26 +11,24 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
 };
 /// <reference path="../../typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
-var compose_1 = require('../compose/compose');
+var compose_1 = require('components/compose/compose');
+var MsgStore_1 = require('components/messenger/MsgStore');
 var Messenger = (function () {
-    function Messenger() {
-        this.title = "Messenger messenger";
-        this.messages = [
-            { title: "Hello", msg: "This is Hello Message" },
-            { title: "Meeting", msg: "This is Meeting Message" },
-            { title: "Good bye", msg: "This is Good bye Message" }
-        ];
+    function Messenger(msgStore) {
+        this.title = "Messenger Component Title";
+        this.messages = msgStore.getAll();
         this.grade = 1;
     }
     Messenger = __decorate([
         angular2_1.Component({
-            selector: "messenger"
+            selector: "messenger",
+            appInjector: [MsgStore_1.MsgStore]
         }),
         angular2_1.View({
             templateUrl: "components/messenger/messenger.tpl.html",
             directives: [angular2_1.NgFor, compose_1.Compose]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [MsgStore_1.MsgStore])
     ], Messenger);
     return Messenger;
 })();
