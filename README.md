@@ -1,4 +1,4 @@
-# Angular2-QuickStart- currently on hold due to unstability of angular2
+# Angular2-QuickStart- currently on hold due to unstability of angular2 will continue after beta release
 The learning curve i have followed in learning the angular. Check the branches
 
 ## Get started
